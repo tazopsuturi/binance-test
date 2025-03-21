@@ -12,7 +12,6 @@ public class TestDataReader {
 	
 	public static void loadTestData(String csvFilePath) {
 		try (CSVReader reader = new CSVReader(new FileReader(csvFilePath))) {
-			// Skip the header row (if present)
 			reader.skip(1);
 			
 			String[] line;
