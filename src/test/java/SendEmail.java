@@ -1,11 +1,18 @@
+import service.TestDataReader;
+
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
 public class SendEmail {
-	private static final String EMAIL = "email@gmail.com";
-	private static final String PASSWORD = "password";
+	
+	static {
+		TestDataReader.loadTestData("src/test/resources/sendemaildata.csv");
+	}
+	
+	private static final String EMAIL = TestDataReader.getValue("email");
+	private static final String PASSWORD = TestDataReader.getValue("password");
 	private static final String SMTP_HOST = "smtp.gmail.com";
 	private static final int SMTP_PORT = 587;
 	

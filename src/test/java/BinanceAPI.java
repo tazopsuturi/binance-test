@@ -5,11 +5,22 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import org.json.*;
+import service.TestDataReader;
 
 public class BinanceAPI {
 	
+	static {
+		TestDataReader.loadTestData("src/test/resources/sendemaildata.csv");
+	}
+	
 	public String getExchangeInfo() throws IOException {
-		URL url = new URL("link to Binance API");
+		
+		String apiUrl = TestDataReader.getValue("binanceAPIUrl");
+		if (apiUrl == null || apiUrl.isEmpty()) {
+			throw new IllegalArgumentException("binanceAPIUrl is missing in CSV");
+		}
+		
+		URL url = new URL(apiUrl);
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		
 		conn.setRequestMethod("GET");

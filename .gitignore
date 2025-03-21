@@ -8,6 +8,7 @@
 logs/
 out/
 target/
+resources/
 
 # BlueJ files
 *.ctxt
