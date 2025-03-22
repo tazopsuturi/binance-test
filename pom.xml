@@ -43,6 +43,22 @@
             <!-- Force specific version -->
             <scope>compile</scope>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.google.apis</groupId>-->
+<!--            <artifactId>google-api-java-client</artifactId>-->
+<!--            <version>1.33.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.google.oauth-client</groupId>-->
+<!--            <artifactId>google-oauth-client</artifactId>-->
+<!--            <version>1.33.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.google.http-client</groupId>-->
+<!--            <artifactId>google-http-client-gson</artifactId>-->
+<!--            <version>1.41.0</version>-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>

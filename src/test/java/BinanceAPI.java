@@ -9,7 +9,7 @@ import org.json.*;
 public class BinanceAPI {
 	
 	public String getExchangeInfo() throws IOException {
-		URL url = new URL("https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT");
+		URL url = new URL("link to Binance API");
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		
 		conn.setRequestMethod("GET");
@@ -26,6 +26,6 @@ public class BinanceAPI {
 		
 		JSONObject json = new JSONObject(response.toString());
 		
-		return json.toString(2);
+		return json.getString("price");
 	}
 }
